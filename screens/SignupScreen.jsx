@@ -20,8 +20,8 @@ function SignupScreen() {
         "Authentication failed!",
         "Could not sign you up. Please check your details or try again later!"
       );
+      setIsAuthenticate(false);
     }
-    setIsAuthenticate(false);
   }
   if (isAuthenticate) {
     return <LoadingOverlay message="Creating User..." />;
