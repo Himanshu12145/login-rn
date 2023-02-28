@@ -9,6 +9,7 @@ function Input({
   onUpdateValue,
   value,
   isInvalid,
+  placeholder,
 }) {
   return (
     <View style={styles.inputContainer}>
@@ -17,9 +18,7 @@ function Input({
       </Text>
       <TextInput
         style={[styles.input, isInvalid && styles.inputInvalid]}
-        placeholder={
-          label === "Password" ? "Enter your password" : "example@example.com"
-        }
+        placeholder={placeholder}
         autoCorrect={false}
         autoCapitalize="none"
         keyboardType={keyboardType}
